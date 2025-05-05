@@ -91,5 +91,5 @@ export const enTranslations: Translations = {
   priceInputError: 'Please enter a price',
   calculatorScreenTitle: 'Calculator',
   settingsScreenTitle: 'Settings',
-  currency: '¥'
+  currency: '円'
 };
