@@ -1,0 +1,11 @@
+{
+  "name": "割引計算アプリ",
+  "short_name": "割引計算",
+  "description": "女性向けのシンプルな割引計算アプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEF6FA",
+  "theme_color": "#FF9FB5",
+  "orientation": "portrait",
+  "icons": []
+}
