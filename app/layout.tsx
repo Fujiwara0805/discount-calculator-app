@@ -2,7 +2,6 @@ import './globals.css';
 import type { Metadata, Viewport } from 'next';
 import { SettingsProvider } from '@/context/SettingsContext';
 import { Noto_Sans_JP } from 'next/font/google';
-import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from '@/components/ui/toaster';
 
 const notoSansJP = Noto_Sans_JP({
@@ -31,23 +30,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja">
       <head>
         <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
         <meta name="theme-color" content="#FF9FB5" />
       </head>
-      <body className={`${notoSansJP.variable} font-sans antialiased bg-[#FEF6FA] dark:bg-zinc-950`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SettingsProvider>
-            {children}
-            <Toaster />
-          </SettingsProvider>
-        </ThemeProvider>
+      <body className={`${notoSansJP.variable} font-sans antialiased bg-[#FEF6FA]`}>
+        <SettingsProvider>
+          {children}
+          <Toaster />
+        </SettingsProvider>
       </body>
     </html>
   );

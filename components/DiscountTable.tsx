@@ -52,13 +52,13 @@ const DiscountTable: React.FC<DiscountTableProps> = ({ originalPrice }) => {
   };
 
   return (
-    <Card className="p-4 shadow-md bg-white dark:bg-zinc-900 overflow-hidden rounded-xl border border-pink-100 dark:border-pink-900/20 cute-bg cute-shadow">
+    <Card className="p-4 shadow-md bg-white overflow-hidden rounded-xl border border-pink-100 cute-bg cute-shadow">
       <div className="flex items-center justify-between mb-4 px-2">
         <div className="flex items-center">
-          <div className="p-2 rounded-full bg-pink-100 dark:bg-pink-900/20 mr-2">
-            <Tag className="h-5 w-5 text-pink-500 dark:text-pink-300" />
+          <div className="p-2 rounded-full bg-pink-100 mr-2">
+            <Tag className="h-5 w-5 text-pink-500" />
           </div>
-          <h2 className="text-xl font-medium text-pink-600 dark:text-pink-300">
+          <h2 className="text-xl font-medium text-pink-600">
             {translations.discountTable}
           </h2>
         </div>
@@ -80,7 +80,7 @@ const DiscountTable: React.FC<DiscountTableProps> = ({ originalPrice }) => {
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
-            <TableRow className="bg-pink-50 dark:bg-pink-950/30">
+            <TableRow className="bg-pink-50">
               <TableHead className="w-1/4 text-center p-3">
                 <span className="flex items-center justify-center text-base">
                   <Percent className="h-4 w-4 mr-1 text-pink-500" />
@@ -111,19 +111,19 @@ const DiscountTable: React.FC<DiscountTableProps> = ({ originalPrice }) => {
               <motion.tr 
                 key={percent} 
                 variants={item} 
-                className="table-row-animate hover:bg-pink-50 dark:hover:bg-pink-950/20 relative overflow-hidden"
+                className="table-row-animate hover:bg-pink-50 relative overflow-hidden"
                 whileHover={{ backgroundColor: 'rgba(255, 159, 181, 0.1)' }}
               >
                 <TableCell className="text-center p-3">
                   <div className="discount-badge">
-                    <span className="text-pink-500 dark:text-pink-400 font-medium">{percent}%</span>
+                    <span className="text-pink-500 font-medium">{percent}%</span>
                     <ArrowDown className="ml-1 h-3 w-3" />
                   </div>
                 </TableCell>
                 <TableCell className="text-center p-3 font-medium text-lg">
                   {formatCurrency(discountedPrice, translations.locale)}
                 </TableCell>
-                <TableCell className="text-center p-3 text-zinc-500 dark:text-zinc-400">
+                <TableCell className="text-center p-3 text-zinc-500">
                   {formatCurrency(priceWithoutTax, translations.locale)}
                 </TableCell>
               </motion.tr>
@@ -132,7 +132,7 @@ const DiscountTable: React.FC<DiscountTableProps> = ({ originalPrice }) => {
         </Table>
       </div>
       
-      <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-4 text-center px-2">
+      <p className="text-sm text-zinc-400 mt-4 text-center px-2">
         {taxRate === 10
           ? translations.taxCalculationInfo10 
           : translations.taxCalculationInfo8}

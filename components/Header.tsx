@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Moon, Sun, ArrowLeft, Calculator, Settings, Sparkles } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { ArrowLeft, Calculator, Settings, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
@@ -13,7 +12,6 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
-  const { theme, setTheme } = useTheme();
   const router = useRouter();
   const pathname = usePathname();
   const isSettingsPage = pathname === '/settings';
@@ -30,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
 
   return (
     <motion.header
-      className="sticky top-0 z-10 bg-gray-100/90 dark:bg-gray-800/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700"
+      className="sticky top-0 z-10 bg-gray-100/90 backdrop-blur-md border-b border-gray-200"
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
@@ -42,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             size="icon"
             aria-label="戻る"
             onClick={() => router.push('/')}
-            className="text-pink-500 dark:text-pink-300"
+            className="text-pink-500"
           >
             <ArrowLeft className="h-6 w-6" />
           </Button>
@@ -61,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           >
             {getTitleIcon()}
           </motion.div>
-          <h1 className="text-2xl font-medium text-pink-500 dark:text-pink-300">
+          <h1 className="text-2xl font-medium text-pink-500">
             {title}
           </h1>
           <motion.div
@@ -76,18 +74,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           </motion.div>
         </motion.div>
         
-        <Button
-          variant="ghost"
-          size="icon"
-          aria-label="Toggle theme"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          {theme === 'dark' ? (
-            <Sun className="h-6 w-6 text-yellow-400" />
-          ) : (
-            <Moon className="h-6 w-6 text-gray-600" />
-          )}
-        </Button>
+        <div className="w-10" />
       </div>
     </motion.header>
   );

@@ -37,7 +37,7 @@ const TabBar: React.FC = () => {
 
   return (
     <motion.div
-      className="fixed bottom-0 left-0 right-0 bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 safe-bottom"
+      className="fixed bottom-0 left-0 right-0 bg-gray-100 border-t border-gray-200 safe-bottom"
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.2, duration: 0.3 }}
@@ -52,8 +52,8 @@ const TabBar: React.FC = () => {
                   onClick={() => handleTabClick(tab.path)}
                   className={`w-full py-3 flex flex-col items-center space-y-1 transition-colors duration-200 ${
                     isActive
-                      ? 'text-pink-500 dark:text-pink-300'
-                      : 'text-gray-500 dark:text-gray-400'
+                      ? 'text-pink-500'
+                      : 'text-gray-500'
                   }`}
                 >
                   <motion.div
@@ -75,7 +75,7 @@ const TabBar: React.FC = () => {
                   {isActive && (
                     <motion.div
                       layoutId="tab-line-indicator"
-                      className="absolute bottom-0 h-0.5 w-1/2 bg-pink-500 dark:bg-pink-300 rounded-t-full"
+                      className="absolute bottom-0 h-0.5 w-1/2 bg-pink-500 rounded-t-full"
                       transition={{ duration: 0.3 }}
                     />
                   )}

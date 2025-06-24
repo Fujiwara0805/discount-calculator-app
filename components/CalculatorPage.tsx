@@ -61,21 +61,21 @@ const CalculatorPage: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="space-y-6"
           >
-            <Card className="p-6 shadow-md bg-white dark:bg-zinc-900 rounded-xl border border-pink-100 dark:border-pink-900/20 cute-bg cute-shadow">
+            <Card className="p-6 shadow-md bg-white rounded-xl border border-pink-100 cute-bg cute-shadow">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-2 bg-pink-100 dark:bg-pink-900/20 rounded-lg">
-                  <Calculator className="w-6 h-6 text-pink-500 dark:text-pink-300" />
+                <div className="p-2 bg-pink-100 rounded-lg">
+                  <Calculator className="w-6 h-6 text-pink-500" />
                 </div>
-                <h2 className="text-xl font-medium text-pink-600 dark:text-pink-300">
+                <h2 className="text-xl font-medium text-pink-600">
                   {translations.appTitle}
                 </h2>
               </div>
-              <div className="relative mb-6 p-4 bg-pink-50/70 dark:bg-pink-950/20 rounded-lg border border-pink-100 dark:border-pink-900/20">
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
+              <div className="relative mb-6 p-4 bg-pink-50/70 rounded-lg border border-pink-100">
+                <p className="text-base text-zinc-600">
                   {translations.appDescription}
                 </p>
                 <motion.div 
-                  className="absolute -top-2 -right-2 p-1.5 bg-pink-100 dark:bg-pink-900/30 rounded-full"
+                  className="absolute -top-2 -right-2 p-1.5 bg-pink-100 rounded-full"
                   animate={{ 
                     rotate: [0, 10, 0, -10, 0],
                     scale: [1, 1.1, 1, 1.1, 1] 
@@ -86,7 +86,7 @@ const CalculatorPage: React.FC = () => {
                     repeatDelay: 3
                   }}
                 >
-                  <Sparkles className="w-5 h-5 text-pink-500 dark:text-pink-300" />
+                  <Sparkles className="w-5 h-5 text-pink-500" />
                 </motion.div>
               </div>
               <div className="space-y-5">
@@ -118,9 +118,9 @@ const CalculatorPage: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="space-y-6"
           >
-            <Card className="p-6 shadow-md bg-white dark:bg-zinc-900 rounded-xl border border-pink-100 dark:border-pink-900/20 cute-bg cute-shadow">
+            <Card className="p-6 shadow-md bg-white rounded-xl border border-pink-100 cute-bg cute-shadow">
               <div className="text-center mb-6 py-4">
-                <p className="text-base text-zinc-500 dark:text-zinc-400">
+                <p className="text-base text-zinc-500">
                   {translations.currentPrice}
                 </p>
                 <motion.div
@@ -129,7 +129,7 @@ const CalculatorPage: React.FC = () => {
                   transition={{ duration: 0.3, delay: 0.1 }}
                   className="relative inline-block"
                 >
-                  <p className="text-3xl font-bold text-pink-600 dark:text-pink-300 mt-2">
+                  <p className="text-3xl font-bold text-pink-600 mt-2">
                     {formatCurrency(calculatedPrice, translations.locale)}
                   </p>
                   <motion.div
@@ -147,7 +147,7 @@ const CalculatorPage: React.FC = () => {
                     <Heart className="h-6 w-6 text-pink-400" fill="#ffb7c9" />
                   </motion.div>
                 </motion.div>
-                <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-1">
+                <p className="text-sm text-zinc-400 mt-1">
                   {taxRate === 10 
                     ? translations.includingTax10 
                     : translations.includingTax8}

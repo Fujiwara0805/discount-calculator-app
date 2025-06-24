@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-zinc-950">
+    <div className="flex flex-col min-h-screen bg-white">
       <Header title={getTitle()} />
       <motion.main
         className="flex-1 px-4 py-6 pb-24 max-w-md mx-auto w-full"

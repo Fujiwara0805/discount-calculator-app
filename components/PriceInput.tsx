@@ -35,7 +35,7 @@ const PriceInput = forwardRef<HTMLInputElement, PriceInputProps>(
       <div className="relative">
         <div className="flex items-center mb-2 ml-1">
           <Coins className="w-5 h-5 mr-2 text-pink-400" />
-          <span className="text-pink-600 dark:text-pink-400 font-medium">
+          <span className="text-pink-600 font-medium">
             {translations.enterPrice}
           </span>
         </div>
@@ -55,7 +55,7 @@ const PriceInput = forwardRef<HTMLInputElement, PriceInputProps>(
             placeholder={placeholder}
             className={`text-center text-xl py-7 ${
               focused ? 'input-highlight' : ''
-            } rounded-xl bg-pink-50/50 dark:bg-pink-950/20`}
+            } rounded-xl bg-pink-50/50`}
             inputMode="numeric"
             autoComplete="off"
           />

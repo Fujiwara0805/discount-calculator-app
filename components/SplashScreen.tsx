@@ -7,7 +7,7 @@ import { Calculator } from 'lucide-react';
 const SplashScreen: React.FC = () => {
   return (
     <motion.div
-      className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-pink-100 dark:from-zinc-950 dark:to-zinc-900 z-50"
+      className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 to-pink-100 z-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -24,14 +24,14 @@ const SplashScreen: React.FC = () => {
         }}
         className="flex flex-col items-center"
       >
-        <div className="bg-pink-500 dark:bg-pink-400 p-5 rounded-full mb-4 shadow-lg shadow-pink-200 dark:shadow-pink-500/20">
+        <div className="bg-pink-500 p-5 rounded-full mb-4 shadow-lg shadow-pink-200">
           <Calculator className="h-12 w-12 text-white" />
         </div>
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.3 }}
-          className="text-2xl font-bold text-pink-500 dark:text-pink-300 mb-2"
+          className="text-2xl font-bold text-pink-500 mb-2"
         >
           割引計算アプリ
         </motion.h1>
@@ -39,7 +39,7 @@ const SplashScreen: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.3 }}
-          className="text-zinc-500 dark:text-zinc-400 text-sm"
+          className="text-zinc-500 text-sm"
         >
           Discount Calculator
         </motion.p>
