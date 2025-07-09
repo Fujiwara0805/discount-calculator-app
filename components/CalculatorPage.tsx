@@ -162,7 +162,7 @@ const CalculatorPage: React.FC = () => {
                   className="w-full flex items-center justify-center text-lg py-5"
                   onClick={handleBack}
                 >
-                  <ArrowLeft className="mr-2 h-5 w-5" /> {translations.reenterPrice}
+ {translations.reenterPrice}
                 </Button>
               </motion.div>
             </Card>

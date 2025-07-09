@@ -53,14 +53,16 @@ const PriceInput = forwardRef<HTMLInputElement, PriceInputProps>(
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={placeholder}
-            className={`text-center text-xl py-7 ${
+            className={`text-center text-base py-8 ${
               focused ? 'input-highlight' : ''
             } rounded-xl bg-pink-50/50`}
             inputMode="numeric"
             autoComplete="off"
+            style={{ fontSize: '16px' }}
           />
           <motion.div 
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-pink-500 font-medium text-lg px-2"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-pink-500 font-medium px-2"
+            style={{ fontSize: '16px' }}
             animate={{ y: focused ? -2 : 0 }}
             transition={{ duration: 0.2, type: "spring" }}
           >
